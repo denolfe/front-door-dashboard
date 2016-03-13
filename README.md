@@ -2,7 +2,7 @@
 
 > Simple web app for the purpose of mounting by the front door
 
-![preview](preview.gif)
+<img src="preview.gif" width="325px">
 
 ## Installation
 
