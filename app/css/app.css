@@ -1,0 +1,95 @@
+.coldest {
+  color: #9b59b6; }
+
+.cold {
+  color: #5faee3; }
+
+.brisk {
+  color: #3498db; }
+
+.cool {
+  color: #1abc9c; }
+
+.moderate {
+  color: #f1c40f; }
+
+.warm {
+  color: #f39c12; }
+
+.hot {
+  color: #d35400; }
+
+.hottest {
+  color: #c0392b; }
+
+.default {
+  color: black; }
+
+body {
+  background-color: #ffffff;
+  color: black; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+.container {
+  padding-top: 1rem; }
+
+.top {
+  min-height: 494px; }
+
+.current-weather {
+  color: #95a5a6;
+  margin: 15rem 0 20rem 0;
+  font-size: 3.5rem;
+  padding: 0 5rem; }
+  .current-weather p {
+    margin: -2rem 0 0 0; }
+
+.forecast, .title {
+  color: #95a5a6; }
+
+.current-temp {
+  font-size: 15rem; }
+
+.current-condition {
+  margin-top: -3rem;
+  padding-left: 2rem; }
+
+.forecast {
+  min-height: 216px; }
+
+.summary {
+  padding-left: 2rem;
+  font-size: 1.9rem; }
+
+.forecast-day {
+  font-size: 2.4rem;
+  padding-bottom: 1rem; }
+
+.small-temp {
+  font-size: 2.4rem;
+  margin: 0.4rem; }
+
+.forecast-text {
+  text-align: center; }
+  .forecast-text p {
+    font-size: 3rem;
+    padding: 3rem 10rem 0; }
+  .forecast-text.ng-hide {
+    opacity: 0; }
+  .forecast-text.ng-hide-remove {
+    display: block !important;
+    transition: all linear 1s; }
+  .forecast-text.ng-hide-add {
+    display: block !important; }
+
+.day {
+  text-align: center; }
+  .day.ng-hide {
+    opacity: 0; }
+  .day.ng-hide-remove {
+    display: block !important;
+    transition: all linear 0.5s; }
+  .day.ng-hide-add {
+    display: block !important; }

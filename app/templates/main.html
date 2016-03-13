@@ -1,0 +1,38 @@
+<section ng-init="init()" class="container">
+  <h5 class="title" ng-bind="dateTime"></h5>
+
+  <section ng-show="forecast">
+    <div class="top">
+      <div class="current-weather row">
+        <div class="column">
+          <div class="current-temp" ng-class="calcTempColor(forecast.currently.temperature)" ng-bind="forecast.currently.temperature | temp"></div>
+          <div class="current-condition">{{forecast.currently.summary}}
+            <span class="apparent-temp" ng-if="Math.abs(forecast.currently.temperature - forecast.currently.apparentTemperature) >= 5">, feels like
+              <span ng-class="calcTempColor(forecast.currently.apparentTemperature)">{{forecast.currently.apparentTemperature | temp}}</span>
+            </span>
+          </div>
+          <div ng-show="forecast.currently.precipProbability > 0.2">{{forecast.currently.precipProbability * 100}}% chance of {{forecast.currently.precipType}}</div>
+          <div class="summary">{{forecast.hourly.summary}}</div>
+        </div>
+        <div class="column">
+          <skycon icon="forecast.currently.icon" size="256" class="pull-right"></skycon>
+        </div>
+      </div>
+    </div>
+
+    <div class="forecast" ng-click="futureForecast = !futureForecast">
+      <div class="row">
+        <div class="forecast-text" ng-show="futureForecast">
+          <p ng-bind="forecast.daily.summary"></p>
+        </div>
+        <div class="column day" ng-repeat="day in forecast.daily.data | limitTo:5:1" ng-hide="futureForecast">
+          <p class="forecast-day" ng-bind="day.time * 1000 | date: 'EEE'">Wed</p>
+          <skycon icon="day.icon" size="64"></skycon>
+          <p class="small-temp" ng-bind="day.temperatureMax | temp" ng-class="calcTempColor(day.temperatureMax)"></p>
+          <p class="small-temp" ng-bind="day.temperatureMin | temp" ng-class="calcTempColor(day.temperatureMin)"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
