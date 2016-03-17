@@ -1,0 +1,41 @@
+{
+  "name": "animated-climacons",
+  "homepage": "/github.com/noahblon/animated-climacons",
+  "authors": [
+    "Théo FIDRY <theo.fidry@gmx.fr>"
+  ],
+  "description": "Adam Whitcroft's Climacons as SVGs animated with CSS.",
+  "main": [
+    "climacons/svg/*",
+    "climacons/svg-css/*",
+    "css/*"
+  ],
+  "keywords": [
+    "climacons",
+    "weather",
+    "icons",
+    "animated"
+  ],
+  "license": "GPL-2.0+",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/theofidry/animated-climacons"
+  },
+  "_release": "8c432028a8",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8c432028a8c12e54ce271c4b050c157c776c4d39"
+  },
+  "_source": "git://github.com/theofidry/animated-climacons.git",
+  "_target": "*",
+  "_originalSource": "animated-climacons",
+  "_direct": true
+}

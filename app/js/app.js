@@ -15,9 +15,9 @@ var dashboardApp = angular.module('dashboardApp', ['ngRoute', 'ngAnimate', 'ngTo
   }])
 
   .factory('ForecastIoFactory', function ($http, $interval) {
-    var apiKey = '',
-      lat = '',
-      lon = '',
+    var apiKey = 'bae6cc3cf17853b30797ca4506accdf3',
+      lat = '39.6304290',
+      lon = '-104.9098980',
       interval = 1000 * 60 * 15,  //15 minutes
       cachedForecast;
 
@@ -64,5 +64,10 @@ var dashboardApp = angular.module('dashboardApp', ['ngRoute', 'ngAnimate', 'ngTo
       }
       var numberFilter = $filter('number');
       return numberFilter(input, precision) + '\u00B0';
+    };
+  })
+  .filter('roundNearestHalf', function () {
+    return function(input) {
+      return Math.round(input*2)/2;
     };
   });

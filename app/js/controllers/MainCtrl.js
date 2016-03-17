@@ -46,6 +46,13 @@ dashboardApp.controller('MainCtrl',
       }
     };
 
+    $scope.getPrecipIcon = function (precipType) {
+      if (precipType == 'snow')
+        return '../vendor/animated-climacons/climacons/svg-css/cloudSnow.svg';
+      else
+        return '../vendor/animated-climacons/climacons/svg-css/cloudDrizzle.svg';
+    };
+
     $scope.futureForecast = false;
 
     $scope.swipeRight = function() {

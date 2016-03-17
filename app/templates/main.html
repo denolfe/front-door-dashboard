@@ -13,6 +13,24 @@
           </div>
           <div ng-show="forecast.currently.precipProbability > 0.2">{{forecast.currently.precipProbability * 100}}% chance of {{forecast.currently.precipType}}</div>
           <div class="summary">{{forecast.hourly.summary}}</div>
+          <div class="special-climacon row">
+            <div class="precipitation column" ng-show="forecast.daily.data[0].precipProbability > 0.2">
+              <div>
+                <figure>
+                  <img class="climacon" ng-src="{{getPrecipIcon(forecast.daily.data[0].precipType)}}" alt="" title="{{forecast.daily.data[0].precipType}}">
+                </figure>
+              </div>
+              <div class="precip-percent">{{forecast.daily.data[0].precipProbability * 100 | number:0}}%</div>
+            </div>
+            <div class="wind column" ng-show="forecast.daily.data[0].windSpeed > 5">
+              <div>
+                <figure>
+                  <img class="climacon" ng-src="../vendor/animated-climacons/climacons/svg/wind.svg" alt="" title="wind">
+                </figure>
+              </div>
+              <div class="wind-speed">{{forecast.daily.data[0].windSpeed * 2 | roundNearestHalf}} mph</div>
+            </div>
+          </div>
         </div>
         <div class="column">
           <skycon icon="forecast.currently.icon" size="256" class="pull-right"></skycon>
@@ -28,8 +46,8 @@
         <div class="column day" ng-repeat="day in forecast.daily.data | limitTo:5:1" ng-hide="futureForecast">
           <p class="forecast-day" ng-bind="day.time * 1000 | date: 'EEE'">Wed</p>
           <skycon icon="day.icon" size="64"></skycon>
-          <p class="small-temp" ng-bind="day.temperatureMax | temp" ng-class="calcTempColor(day.temperatureMax)"></p>
-          <p class="small-temp" ng-bind="day.temperatureMin | temp" ng-class="calcTempColor(day.temperatureMin)"></p>
+          <p class="high-temp" ng-bind="day.temperatureMax | temp" ng-class="calcTempColor(day.temperatureMax)"></p>
+          <p class="low-temp" ng-bind="day.temperatureMin | temp" ng-class="calcTempColor(day.temperatureMin)"></p>
         </div>
       </div>
     </div>

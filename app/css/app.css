@@ -50,26 +50,46 @@ body {
   color: #95a5a6; }
 
 .current-temp {
-  font-size: 15rem; }
+  font-size: 15rem;
+  text-align: center; }
 
 .current-condition {
   margin-top: -3rem;
-  padding-left: 2rem; }
+  padding-left: 2rem;
+  text-align: center; }
 
 .forecast {
   min-height: 216px; }
 
 .summary {
   padding-left: 2rem;
-  font-size: 1.9rem; }
+  font-size: 1.9rem;
+  text-align: center; }
+
+img.climacon {
+  width: 64px; }
+
+.special-climacon {
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  text-align: center; }
+  .special-climacon .column:first-of-type {
+    margin-right: -30rem; }
+
+.wind-speed, .precip-percent {
+  margin-top: -3rem; }
 
 .forecast-day {
   font-size: 2.4rem;
   padding-bottom: 1rem; }
 
-.small-temp {
-  font-size: 2.4rem;
-  margin: 0.4rem; }
+.high-temp {
+  margin: 0.4rem;
+  font-size: 2.4rem; }
+
+.low-temp {
+  margin: 0.4rem;
+  font-size: 1.7rem; }
 
 .forecast-text {
   text-align: center; }
